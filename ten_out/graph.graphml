@@ -1,0 +1,730 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d11" for="edge" attr.name="kind" attr.type="string"/>
+<key id="d10" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d9" for="node" attr.name="sum_fav" attr.type="double"/>
+<key id="d8" for="node" attr.name="mean_score" attr.type="double"/>
+<key id="d7" for="node" attr.name="top_terms" attr.type="string"/>
+<key id="d6" for="node" attr.name="label" attr.type="string"/>
+<key id="d5" for="node" attr.name="coherence" attr.type="double"/>
+<key id="d4" for="node" attr.name="size" attr.type="long"/>
+<key id="d3" for="node" attr.name="tid" attr.type="long"/>
+<key id="d2" for="node" attr.name="time_to" attr.type="long"/>
+<key id="d1" for="node" attr.name="time_from" attr.type="long"/>
+<key id="d0" for="node" attr.name="time_id" attr.type="long"/>
+<graph edgedefault="directed"><node id="2:0">
+  <data key="d0">2</data>
+  <data key="d1">2010</data>
+  <data key="d2">2011</data>
+  <data key="d3">0</data>
+  <data key="d4">20</data>
+  <data key="d5">0.7398852705955505</data>
+  <data key="d6">。, 、, 為る, 世界, …, 居る</data>
+  <data key="d7">。; 、; 為る; 世界; …; 居る; ／; 御; 異; 彼; 主人; 公; 有る; 版; 成る</data>
+  <data key="d8">35697.8</data>
+  <data key="d9">222337.0</data>
+</node>
+<node id="2:1">
+  <data key="d0">2</data>
+  <data key="d1">2010</data>
+  <data key="d2">2011</data>
+  <data key="d3">1</data>
+  <data key="d4">10</data>
+  <data key="d5">0.8028799891471863</data>
+  <data key="d6">、, 。, 為る, 世界, 居る, 族</data>
+  <data key="d7">、; 。; 為る; 世界; 居る; 族; 有る; 事; 知識; 主人; 話; 様; 異; 公; 御</data>
+  <data key="d8">21510.1</data>
+  <data key="d9">64827.0</data>
+</node>
+<node id="2:2">
+  <data key="d0">2</data>
+  <data key="d1">2010</data>
+  <data key="d2">2011</data>
+  <data key="d3">2</data>
+  <data key="d4">20</data>
+  <data key="d5">0.7438246011734009</data>
+  <data key="d6">。, 、, 為る, …, 勇者, 世界</data>
+  <data key="d7">。; 、; 為る; …; 勇者; 世界; 王; 居る; ？; 国; 結婚; 異; 有る; 魔王; 達</data>
+  <data key="d8">23735.8</data>
+  <data key="d9">148217.0</data>
+</node>
+<node id="3:0">
+  <data key="d0">3</data>
+  <data key="d1">2011</data>
+  <data key="d2">2012</data>
+  <data key="d3">0</data>
+  <data key="d4">14</data>
+  <data key="d5">0.7981376647949219</data>
+  <data key="d6">。, 為る, 、, ゲーム-game, 世界, 居る</data>
+  <data key="d7">。; 為る; 、; ゲーム-game; 世界; 居る; ※; プレーヤー-player; プレー-play; ）; （; 成る; デス-death; 仕舞う; 彼</data>
+  <data key="d8">55930.42857142857</data>
+  <data key="d9">262667.0</data>
+</node>
+<node id="3:1">
+  <data key="d0">3</data>
+  <data key="d1">2011</data>
+  <data key="d2">2012</data>
+  <data key="d3">1</data>
+  <data key="d4">75</data>
+  <data key="d5">0.7061790227890015</data>
+  <data key="d6">。, 、, 為る, 世界, ＊, …</data>
+  <data key="d7">。; 、; 為る; 世界; ＊; …; 居る; 御; 異; 有る; 成る; 主人; 公; 事; 物語</data>
+  <data key="d8">32091.693333333333</data>
+  <data key="d9">765288.0</data>
+</node>
+<node id="3:2">
+  <data key="d0">3</data>
+  <data key="d1">2011</data>
+  <data key="d2">2012</data>
+  <data key="d3">2</data>
+  <data key="d4">12</data>
+  <data key="d5">0.7781986594200134</data>
+  <data key="d6">。, 、, 為る, 世界, 勇者, ／</data>
+  <data key="d7">。; 、; 為る; 世界; 勇者; ／; 有る; 居る; 様; 無い; 成る; 異; 主人; ．; 人生</data>
+  <data key="d8">93697.75</data>
+  <data key="d9">396915.0</data>
+</node>
+<node id="4:0">
+  <data key="d0">4</data>
+  <data key="d1">2012</data>
+  <data key="d2">2013</data>
+  <data key="d3">0</data>
+  <data key="d4">18</data>
+  <data key="d5">0.8000279664993286</data>
+  <data key="d6">。, 、, 為る, ゲーム-game, プレー-play, 世界</data>
+  <data key="d7">。; 、; 為る; ゲーム-game; プレー-play; 世界; 有る; 公; 主人; デス-death; vrmmo; 居る; アウト-out; ログ-log; ※</data>
+  <data key="d8">47047.555555555555</data>
+  <data key="d9">285140.0</data>
+</node>
+<node id="4:1">
+  <data key="d0">4</data>
+  <data key="d1">2012</data>
+  <data key="d2">2013</data>
+  <data key="d3">1</data>
+  <data key="d4">37</data>
+  <data key="d5">0.7307626008987427</data>
+  <data key="d6">。, 、, 為る, 居る, 事, 私-代名詞</data>
+  <data key="d7">。; 、; 為る; 居る; 事; 私-代名詞; 成る; …; 彼女; 無い; 僕; 世界; ―; ？; ！</data>
+  <data key="d8">31813.054054054053</data>
+  <data key="d9">404337.0</data>
+</node>
+<node id="4:2">
+  <data key="d0">4</data>
+  <data key="d1">2012</data>
+  <data key="d2">2013</data>
+  <data key="d3">2</data>
+  <data key="d4">16</data>
+  <data key="d5">0.7988975048065186</data>
+  <data key="d6">。, 、, 為る, 世界, 彼, ―</data>
+  <data key="d7">。; 、; 為る; 世界; 彼; ―; 無い; 魔王; …; 御; ※; 事; ！; 成る; 中</data>
+  <data key="d8">102999.3125</data>
+  <data key="d9">566674.0</data>
+</node>
+<node id="4:3">
+  <data key="d0">4</data>
+  <data key="d1">2012</data>
+  <data key="d2">2013</data>
+  <data key="d3">3</data>
+  <data key="d4">17</data>
+  <data key="d5">0.8095049262046814</data>
+  <data key="d6">。, 、, 為る, 世界, 魔法, ―</data>
+  <data key="d7">。; 、; 為る; 世界; 魔法; ―; ！; 居る; 勇者; …; 使う; 有る; 様; 成る; 少年</data>
+  <data key="d8">48211.76470588235</data>
+  <data key="d9">280084.0</data>
+</node>
+<node id="4:4">
+  <data key="d0">4</data>
+  <data key="d1">2012</data>
+  <data key="d2">2013</data>
+  <data key="d3">4</data>
+  <data key="d4">29</data>
+  <data key="d5">0.7749126553535461</data>
+  <data key="d6">。, 、, 為る, 世界, 異, 成る</data>
+  <data key="d7">。; 、; 為る; 世界; 異; 成る; 居る; 有る; …; 御; ！; 無い; 様; ―; ／</data>
+  <data key="d8">26604.827586206895</data>
+  <data key="d9">247977.0</data>
+</node>
+<node id="5:0">
+  <data key="d0">5</data>
+  <data key="d1">2013</data>
+  <data key="d2">2014</data>
+  <data key="d3">0</data>
+  <data key="d4">16</data>
+  <data key="d5">0.819542646408081</data>
+  <data key="d6">。, 、, 為る, ゲーム-game, 有る, 成る</data>
+  <data key="d7">。; 、; 為る; ゲーム-game; 有る; 成る; 居る; スキル-skill; 世界; プレー-play; vrmmo; 事; ？; 公; 主人</data>
+  <data key="d8">29262.375</data>
+  <data key="d9">161028.0</data>
+</node>
+<node id="5:1">
+  <data key="d0">5</data>
+  <data key="d1">2013</data>
+  <data key="d2">2014</data>
+  <data key="d3">1</data>
+  <data key="d4">19</data>
+  <data key="d5">0.8012042045593262</data>
+  <data key="d6">。, 、, 為る, ゲーム-game, 乙女, ！</data>
+  <data key="d7">。; 、; 為る; ゲーム-game; 乙女; ！; 居る; 世界; 有る; 私-代名詞; 前世; 事; 無い; 悪役; 転生</data>
+  <data key="d8">34560.89473684211</data>
+  <data key="d9">247869.0</data>
+</node>
+<node id="5:2">
+  <data key="d0">5</data>
+  <data key="d1">2013</data>
+  <data key="d2">2014</data>
+  <data key="d3">2</data>
+  <data key="d4">52</data>
+  <data key="d5">0.7768349051475525</data>
+  <data key="d6">。, 、, 為る, 世界, ！, 居る</data>
+  <data key="d7">。; 、; 為る; 世界; ！; 居る; 異; …; ／; 勇者; ？; 御; 成る; ：; 章</data>
+  <data key="d8">32189.923076923078</data>
+  <data key="d9">590441.0</data>
+</node>
+<node id="5:3">
+  <data key="d0">5</data>
+  <data key="d1">2013</data>
+  <data key="d2">2014</data>
+  <data key="d3">3</data>
+  <data key="d4">13</data>
+  <data key="d5">0.8139153122901917</data>
+  <data key="d6">、, 。, 為る, …, 魔法, 世界</data>
+  <data key="d7">、; 。; 為る; …; 魔法; 世界; 中; 彼; （; ）; 御; ！; 成る; 少年; 巻</data>
+  <data key="d8">69239.23076923077</data>
+  <data key="d9">311482.0</data>
+</node>
+<node id="6:0">
+  <data key="d0">6</data>
+  <data key="d1">2014</data>
+  <data key="d2">2015</data>
+  <data key="d3">0</data>
+  <data key="d4">14</data>
+  <data key="d5">0.8136891722679138</data>
+  <data key="d6">、, 。, 為る, 成る, ―, 様</data>
+  <data key="d7">、; 。; 為る; 成る; ―; 様; …; 居る; 御; ！; 結婚; 彼女; 歳; ／; 事</data>
+  <data key="d8">30756.64285714286</data>
+  <data key="d9">156877.0</data>
+</node>
+<node id="6:1">
+  <data key="d0">6</data>
+  <data key="d1">2014</data>
+  <data key="d2">2015</data>
+  <data key="d3">1</data>
+  <data key="d4">16</data>
+  <data key="d5">0.8249794840812683</data>
+  <data key="d6">。, 、, 為る, 王子, 婚約, 有る</data>
+  <data key="d7">。; 、; 為る; 王子; 婚約; 有る; 令嬢; 居る; 御; 公爵; 話; 者; 破棄; 彼女; 」</data>
+  <data key="d8">33093.4375</data>
+  <data key="d9">197315.0</data>
+</node>
+<node id="6:2">
+  <data key="d0">6</data>
+  <data key="d1">2014</data>
+  <data key="d2">2015</data>
+  <data key="d3">2</data>
+  <data key="d4">16</data>
+  <data key="d5">0.8306565880775452</data>
+  <data key="d6">。, 、, 為る, ゲーム-game, 世界, 有る</data>
+  <data key="d7">。; 、; 為る; ゲーム-game; 世界; 有る; 乙女; ！; 攻略; 居る; 転生; ヒロイン-heroine; 悪役; 令嬢; 事</data>
+  <data key="d8">60388.0625</data>
+  <data key="d9">349208.0</data>
+</node>
+<node id="6:3">
+  <data key="d0">6</data>
+  <data key="d1">2014</data>
+  <data key="d2">2015</data>
+  <data key="d3">3</data>
+  <data key="d4">82</data>
+  <data key="d5">0.7688015103340149</data>
+  <data key="d6">、, 。, 為る, 世界, 魔法, 居る</data>
+  <data key="d7">、; 。; 為る; 世界; 魔法; 居る; 異; ！; …; 成る; 様; 第; 有る; 『; 』</data>
+  <data key="d8">50789.35365853659</data>
+  <data key="d9">1539242.0</data>
+</node>
+<node id="6:4">
+  <data key="d0">6</data>
+  <data key="d1">2014</data>
+  <data key="d2">2015</data>
+  <data key="d3">4</data>
+  <data key="d4">14</data>
+  <data key="d5">0.8073222041130066</data>
+  <data key="d6">。, 、, 為る, 居る, ！, 成る</data>
+  <data key="d7">。; 、; 為る; 居る; ！; 成る; …; 公; 主人; 世界; 転生; 俺; ？; 異; 御</data>
+  <data key="d8">32221.285714285714</data>
+  <data key="d9">169515.0</data>
+</node>
+<node id="7:0">
+  <data key="d0">7</data>
+  <data key="d1">2015</data>
+  <data key="d2">2016</data>
+  <data key="d3">0</data>
+  <data key="d4">11</data>
+  <data key="d5">0.7942533493041992</data>
+  <data key="d6">、, 。, 為る, 世界, 居る, 彼</data>
+  <data key="d7">、; 。; 為る; 世界; 居る; 彼; 有る; ゲーム-game; ！; 成る; 事; スキル-skill; 異; 中; …</data>
+  <data key="d8">59877.72727272727</data>
+  <data key="d9">235615.0</data>
+</node>
+<node id="7:1">
+  <data key="d0">7</data>
+  <data key="d1">2015</data>
+  <data key="d2">2016</data>
+  <data key="d3">1</data>
+  <data key="d4">60</data>
+  <data key="d5">0.7873704433441162</data>
+  <data key="d6">。, 、, 為る, 婚約, 令嬢, 居る</data>
+  <data key="d7">。; 、; 為る; 婚約; 令嬢; 居る; 有る; …; 様; 成る; 御; 者; 事; ／; ！</data>
+  <data key="d8">30018.6</data>
+  <data key="d9">655784.0</data>
+</node>
+<node id="7:2">
+  <data key="d0">7</data>
+  <data key="d1">2015</data>
+  <data key="d2">2016</data>
+  <data key="d3">2</data>
+  <data key="d4">72</data>
+  <data key="d5">0.7824224829673767</data>
+  <data key="d6">、, 。, 為る, 世界, ！, 居る</data>
+  <data key="d7">、; 。; 為る; 世界; ！; 居る; 魔法; 成る; 有る; 様; …; ※; 事; 俺; 異</data>
+  <data key="d8">60338.875</data>
+  <data key="d9">1552620.0</data>
+</node>
+<node id="7:3">
+  <data key="d0">7</data>
+  <data key="d1">2015</data>
+  <data key="d2">2016</data>
+  <data key="d3">3</data>
+  <data key="d4">10</data>
+  <data key="d5">0.8432725071907043</data>
+  <data key="d6">。, 、, 為る, 世界, 召喚, 居る</data>
+  <data key="d7">。; 、; 為る; 世界; 召喚; 居る; 異; 章; 勇者; 第; ：; 彼; ―; 一; 事</data>
+  <data key="d8">82944.9</data>
+  <data key="d9">305414.0</data>
+</node>
+<node id="8:0">
+  <data key="d0">8</data>
+  <data key="d1">2016</data>
+  <data key="d2">2017</data>
+  <data key="d3">0</data>
+  <data key="d4">14</data>
+  <data key="d5">0.8016308546066284</data>
+  <data key="d6">。, 、, 為る, 世界, 日本, ！</data>
+  <data key="d7">。; 、; 為る; 世界; 日本; ！; 有る; 軍; 居る; 」; 「; 人; 主人; 公; 転生</data>
+  <data key="d8">31522.214285714286</data>
+  <data key="d9">148161.0</data>
+</node>
+<node id="8:1">
+  <data key="d0">8</data>
+  <data key="d1">2016</data>
+  <data key="d2">2017</data>
+  <data key="d3">1</data>
+  <data key="d4">36</data>
+  <data key="d5">0.7429032921791077</data>
+  <data key="d6">。, 、, 為る, ゲーム-game, 世界, ─</data>
+  <data key="d7">。; 、; 為る; ゲーム-game; 世界; ─; 居る; ！; 事; …; スキル-skill; プレーヤー-player; 成る; vrmmo; 有る</data>
+  <data key="d8">47812.944444444445</data>
+  <data key="d9">537363.0</data>
+</node>
+<node id="8:2">
+  <data key="d0">8</data>
+  <data key="d1">2016</data>
+  <data key="d2">2017</data>
+  <data key="d3">2</data>
+  <data key="d4">22</data>
+  <data key="d5">0.7521483898162842</data>
+  <data key="d6">、, 。, 為る, ！, 巻, 世界</data>
+  <data key="d7">、; 。; 為る; ！; 巻; 世界; 「; 」; 発売; 居る; 中; 様; 異; 【; 】</data>
+  <data key="d8">110578.0</data>
+  <data key="d9">823382.0</data>
+</node>
+<node id="8:3">
+  <data key="d0">8</data>
+  <data key="d1">2016</data>
+  <data key="d2">2017</data>
+  <data key="d3">3</data>
+  <data key="d4">13</data>
+  <data key="d5">0.8336524963378906</data>
+  <data key="d6">。, 、, 為る, 魔王, 世界, 居る</data>
+  <data key="d7">。; 、; 為る; 魔王; 世界; 居る; 事; 成る; 魔族; 人間; 彼; ／; ！; 邪神; ―</data>
+  <data key="d8">49331.846153846156</data>
+  <data key="d9">205378.0</data>
+</node>
+<node id="8:4">
+  <data key="d0">8</data>
+  <data key="d1">2016</data>
+  <data key="d2">2017</data>
+  <data key="d3">4</data>
+  <data key="d4">53</data>
+  <data key="d5">0.8048244714736938</data>
+  <data key="d6">、, 。, 為る, 魔法, ！, 世界</data>
+  <data key="d7">、; 。; 為る; 魔法; ！; 世界; 居る; 様; 有る; 成る; ―; ※; 事; 彼; 中</data>
+  <data key="d8">53407.20754716981</data>
+  <data key="d9">976186.0</data>
+</node>
+<node id="8:5">
+  <data key="d0">8</data>
+  <data key="d1">2016</data>
+  <data key="d2">2017</data>
+  <data key="d3">5</data>
+  <data key="d4">32</data>
+  <data key="d5">0.8286807537078857</data>
+  <data key="d6">、, 。, 為る, 婚約, 令嬢, 破棄</data>
+  <data key="d7">、; 。; 為る; 婚約; 令嬢; 破棄; …; ！; 有る; 居る; 様; オウジ; 成る; ―; 「</data>
+  <data key="d8">30612.3125</data>
+  <data key="d9">346911.0</data>
+</node>
+<node id="9:0">
+  <data key="d0">9</data>
+  <data key="d1">2017</data>
+  <data key="d2">2018</data>
+  <data key="d3">0</data>
+  <data key="d4">12</data>
+  <data key="d5">0.7544236183166504</data>
+  <data key="d6">、, 。, 為る, ＊, ！, ？</data>
+  <data key="d7">、; 。; 為る; ＊; ！; ？; 少女; 居る; 有る; 成る; 日; ノブナガ; 事; 高校; 】</data>
+  <data key="d8">28208.166666666668</data>
+  <data key="d9">108737.0</data>
+</node>
+<node id="9:1">
+  <data key="d0">9</data>
+  <data key="d1">2017</data>
+  <data key="d2">2018</data>
+  <data key="d3">1</data>
+  <data key="d4">16</data>
+  <data key="d5">0.798485517501831</data>
+  <data key="d6">。, 、, 為る, ゲーム-game, プレーヤー-player, 居る</data>
+  <data key="d7">。; 、; 為る; ゲーム-game; プレーヤー-player; 居る; プレー-play; ！; 世界; 成る; vrmmo; 有る; 到達; スキル-skill; 月</data>
+  <data key="d8">29840.75</data>
+  <data key="d9">156667.0</data>
+</node>
+<node id="9:2">
+  <data key="d0">9</data>
+  <data key="d1">2017</data>
+  <data key="d2">2018</data>
+  <data key="d3">2</data>
+  <data key="d4">18</data>
+  <data key="d5">0.8543406128883362</data>
+  <data key="d6">、, 。, 為る, 魔法, 居る, …</data>
+  <data key="d7">、; 。; 為る; 魔法; 居る; …; 有る; ☆; ！; 魔力; 成る; 世界; 俺; 使う; 中</data>
+  <data key="d8">67062.05555555556</data>
+  <data key="d9">409439.0</data>
+</node>
+<node id="9:3">
+  <data key="d0">9</data>
+  <data key="d1">2017</data>
+  <data key="d2">2018</data>
+  <data key="d3">3</data>
+  <data key="d4">33</data>
+  <data key="d5">0.7868906259536743</data>
+  <data key="d6">、, 。, 為る, 婚約, …, ！</data>
+  <data key="d7">、; 。; 為る; 婚約; …; ！; 破棄; 居る; 有る; 令嬢; 成る; 魔王; 事; 様; 勇者</data>
+  <data key="d8">37869.90909090909</data>
+  <data key="d9">419518.0</data>
+</node>
+<node id="10:0">
+  <data key="d0">10</data>
+  <data key="d1">2018</data>
+  <data key="d2">2019</data>
+  <data key="d3">0</data>
+  <data key="d4">11</data>
+  <data key="d5">0.8600621819496155</data>
+  <data key="d6">。, 、, 為る, ゲーム-game, 悪役, 令嬢</data>
+  <data key="d7">。; 、; 為る; ゲーム-game; 悪役; 令嬢; 居る; 乙女; ！; 有る; …; 事; 世界; ミス-mistake; ？</data>
+  <data key="d8">24720.727272727272</data>
+  <data key="d9">83585.0</data>
+</node>
+<node id="10:1">
+  <data key="d0">10</data>
+  <data key="d1">2018</data>
+  <data key="d2">2019</data>
+  <data key="d3">1</data>
+  <data key="d4">72</data>
+  <data key="d5">0.8110634088516235</data>
+  <data key="d6">。, 、, 為る, 婚約, 令嬢, 有る</data>
+  <data key="d7">。; 、; 為る; 婚約; 令嬢; 有る; 居る; 様; ！; …; 成る; オウジ; 王子; 事; 者</data>
+  <data key="d8">31023.972222222223</data>
+  <data key="d9">671675.0</data>
+</node>
+<node id="10:2">
+  <data key="d0">10</data>
+  <data key="d1">2018</data>
+  <data key="d2">2019</data>
+  <data key="d3">2</data>
+  <data key="d4">11</data>
+  <data key="d5">0.8568845987319946</data>
+  <data key="d6">。, 、, 為る, 『, 』, 居る</data>
+  <data key="d7">。; 、; 為る; 『; 』; 居る; 第; 幕; ―; 成る; 様; 魔法; □; 事; 前世</data>
+  <data key="d8">33129.545454545456</data>
+  <data key="d9">100685.0</data>
+</node>
+<node id="10:3">
+  <data key="d0">10</data>
+  <data key="d1">2018</data>
+  <data key="d2">2019</data>
+  <data key="d3">3</data>
+  <data key="d4">23</data>
+  <data key="d5">0.8354767560958862</data>
+  <data key="d6">、, 。, 為る, 魔王, ！, 居る</data>
+  <data key="d7">、; 。; 為る; 魔王; ！; 居る; ―; 彼; …; 成る; 」; 「; 事; 様; 中</data>
+  <data key="d8">60787.69565217391</data>
+  <data key="d9">440330.0</data>
+</node>
+<node id="10:4">
+  <data key="d0">10</data>
+  <data key="d1">2018</data>
+  <data key="d2">2019</data>
+  <data key="d3">4</data>
+  <data key="d4">16</data>
+  <data key="d5">0.8369272351264954</data>
+  <data key="d6">、, 。, 為る, 魔法, …, 居る</data>
+  <data key="d7">、; 。; 為る; 魔法; …; 居る; 世界; ！; 【; 】; 有る; 成る; 中; 』; 『</data>
+  <data key="d8">84803.1875</data>
+  <data key="d9">383633.0</data>
+</node>
+<node id="11:0">
+  <data key="d0">11</data>
+  <data key="d1">2019</data>
+  <data key="d2">2020</data>
+  <data key="d3">0</data>
+  <data key="d4">17</data>
+  <data key="d5">0.7909674048423767</data>
+  <data key="d6">、, 。, 為る, 居る, ！, 高校</data>
+  <data key="d7">、; 。; 為る; 居る; ！; 高校; 「; 」; もてる; ※; …; 事; 成る; 俺; 幼馴染み</data>
+  <data key="d8">28283.0</data>
+  <data key="d9">114064.0</data>
+</node>
+<node id="11:1">
+  <data key="d0">11</data>
+  <data key="d1">2019</data>
+  <data key="d2">2020</data>
+  <data key="d3">1</data>
+  <data key="d4">196</data>
+  <data key="d5">0.7833536267280579</data>
+  <data key="d6">。, 、, 為る, 婚約, 令嬢, 居る</data>
+  <data key="d7">。; 、; 為る; 婚約; 令嬢; 居る; 破棄; ！; 様; 有る; …; 「; 」; 成る; 王太子</data>
+  <data key="d8">33871.25</data>
+  <data key="d9">1514612.0</data>
+</node>
+<node id="11:2">
+  <data key="d0">11</data>
+  <data key="d1">2019</data>
+  <data key="d2">2020</data>
+  <data key="d3">2</data>
+  <data key="d4">19</data>
+  <data key="d5">0.8387834429740906</data>
+  <data key="d6">、, 。, 為る, 魔術, 魔法, 居る</data>
+  <data key="d7">、; 。; 為る; 魔術; 魔法; 居る; 成る; 魔王; 事; ！; 彼; 世界; 転生; …; 有る</data>
+  <data key="d8">50981.15789473684</data>
+  <data key="d9">260501.0</data>
+</node>
+<node id="11:3">
+  <data key="d0">11</data>
+  <data key="d1">2019</data>
+  <data key="d2">2020</data>
+  <data key="d3">3</data>
+  <data key="d4">12</data>
+  <data key="d5">0.8597347736358643</data>
+  <data key="d6">、, 。, 為る, 魔王, …, ！</data>
+  <data key="d7">、; 。; 為る; 魔王; …; ！; 彼; 」; 「; 居る; シェード-shade; カイト-kite; 様; 事; 無い</data>
+  <data key="d8">40567.666666666664</data>
+  <data key="d9">114265.0</data>
+</node>
+<node id="12:0">
+  <data key="d0">12</data>
+  <data key="d1">2020</data>
+  <data key="d2">2021</data>
+  <data key="d3">0</data>
+  <data key="d4">25</data>
+  <data key="d5">0.7732750773429871</data>
+  <data key="d6">、, 。, 為る, 高校, 居る, 「</data>
+  <data key="d7">、; 。; 為る; 高校; 居る; 「; 」; ！; 成る; 事; …; 俺; 有る; もてる; 生</data>
+  <data key="d8">26234.48</data>
+  <data key="d9">143591.0</data>
+</node>
+<node id="12:1">
+  <data key="d0">12</data>
+  <data key="d1">2020</data>
+  <data key="d2">2021</data>
+  <data key="d3">1</data>
+  <data key="d4">21</data>
+  <data key="d5">0.7922018766403198</data>
+  <data key="d6">、, 。, 為る, ゲーム-game, ！, 令嬢</data>
+  <data key="d7">、; 。; 為る; ゲーム-game; ！; 令嬢; 悪役; 私-代名詞; 居る; …; 乙女; 世界; 転生; 有る; 前世</data>
+  <data key="d8">30794.333333333332</data>
+  <data key="d9">142246.0</data>
+</node>
+<node id="12:2">
+  <data key="d0">12</data>
+  <data key="d1">2020</data>
+  <data key="d2">2021</data>
+  <data key="d3">2</data>
+  <data key="d4">13</data>
+  <data key="d5">0.8211548924446106</data>
+  <data key="d6">、, 。, 為る, スキル-skill, 】, 【</data>
+  <data key="d7">、; 。; 為る; スキル-skill; 】; 【; ！; 世界; 成る; ダンジョン; 僕; 居る; 言う; 事; 「</data>
+  <data key="d8">63362.0</data>
+  <data key="d9">165103.0</data>
+</node>
+<node id="12:3">
+  <data key="d0">12</data>
+  <data key="d1">2020</data>
+  <data key="d2">2021</data>
+  <data key="d3">3</data>
+  <data key="d4">11</data>
+  <data key="d5">0.8444845080375671</data>
+  <data key="d6">、, 。, 為る, 魔術, 魔法, 』</data>
+  <data key="d7">、; 。; 為る; 魔術; 魔法; 』; 居る; 『; 事; 「; 」; 家; 成る; ―; 才能</data>
+  <data key="d8">81324.90909090909</data>
+  <data key="d9">187145.0</data>
+</node>
+<node id="12:4">
+  <data key="d0">12</data>
+  <data key="d1">2020</data>
+  <data key="d2">2021</data>
+  <data key="d3">4</data>
+  <data key="d4">10</data>
+  <data key="d5">0.8530954122543335</data>
+  <data key="d6">、, 。, 為る, 魔術, 魔王, 居る</data>
+  <data key="d7">、; 。; 為る; 魔術; 魔王; 居る; 勇者; 魔法; 「; 魔導; 」; 銃; 魔; ■; 世界</data>
+  <data key="d8">24253.4</data>
+  <data key="d9">51705.0</data>
+</node>
+<node id="12:5">
+  <data key="d0">12</data>
+  <data key="d1">2020</data>
+  <data key="d2">2021</data>
+  <data key="d3">5</data>
+  <data key="d4">16</data>
+  <data key="d5">0.8400585651397705</data>
+  <data key="d6">、, 。, 為る, パーティー-party, 魔王, 居る</data>
+  <data key="d7">、; 。; 為る; パーティー-party; 魔王; 居る; 勇者; ！; カイト-kite; 彼; 魔法; 」; 「; シェード-shade; …</data>
+  <data key="d8">37086.125</data>
+  <data key="d9">126783.0</data>
+</node>
+<node id="12:6">
+  <data key="d0">12</data>
+  <data key="d1">2020</data>
+  <data key="d2">2021</data>
+  <data key="d3">6</data>
+  <data key="d4">136</data>
+  <data key="d5">0.7971300482749939</data>
+  <data key="d6">。, 、, 為る, 婚約, 居る, 令嬢</data>
+  <data key="d7">。; 、; 為る; 婚約; 居る; 令嬢; 聖女; 破棄; 様; ！; …; 王太子; 成る; 」; 「</data>
+  <data key="d8">30442.46323529412</data>
+  <data key="d9">814436.0</data>
+</node>
+<node id="12:7">
+  <data key="d0">12</data>
+  <data key="d1">2020</data>
+  <data key="d2">2021</data>
+  <data key="d3">7</data>
+  <data key="d4">12</data>
+  <data key="d5">0.8622751832008362</data>
+  <data key="d6">。, 、, 為る, 婚約, 妹, 居る</data>
+  <data key="d7">。; 、; 為る; 婚約; 妹; 居る; 様; 姉; 家; 侯爵; 結婚; 私-代名詞; 者; 伯爵; …</data>
+  <data key="d8">28454.5</data>
+  <data key="d9">48869.0</data>
+</node>
+<node id="13:0">
+  <data key="d0">13</data>
+  <data key="d1">2021</data>
+  <data key="d2">2022</data>
+  <data key="d3">0</data>
+  <data key="d4">127</data>
+  <data key="d5">0.7633315920829773</data>
+  <data key="d6">。, 、, 為る, 婚約, 居る, …</data>
+  <data key="d7">。; 、; 為る; 婚約; 居る; …; 様; 成る; 事; 令嬢; 「; 」; ！; 者; 有る</data>
+  <data key="d8">29357.259842519685</data>
+  <data key="d9">608762.0</data>
+</node>
+<node id="13:1">
+  <data key="d0">13</data>
+  <data key="d1">2021</data>
+  <data key="d2">2022</data>
+  <data key="d3">1</data>
+  <data key="d4">13</data>
+  <data key="d5">0.821448028087616</data>
+  <data key="d6">。, 、, 為る, パーティー-party, 居る, 」</data>
+  <data key="d7">。; 、; 為る; パーティー-party; 居る; 」; 「; ！; 事; 有る; 回復; 魔法; 勇者; ─; 追放</data>
+  <data key="d8">33191.692307692305</data>
+  <data key="d9">91681.0</data>
+</node>
+<edge source="2:0" target="3:1">
+  <data key="d10">0.5457316756248474</data>
+  <data key="d11">merge</data>
+</edge>
+<edge source="2:1" target="3:1">
+  <data key="d10">0.5583997735851689</data>
+  <data key="d11">merge</data>
+</edge>
+<edge source="3:0" target="4:0">
+  <data key="d10">0.5731457071644919</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="3:2" target="4:4">
+  <data key="d10">0.5726417491310521</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="4:0" target="5:0">
+  <data key="d10">0.6269195744865819</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="4:4" target="5:2">
+  <data key="d10">0.5967062661522313</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="5:1" target="6:2">
+  <data key="d10">0.6619264423847199</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="6:0" target="7:1">
+  <data key="d10">0.6122205088013096</data>
+  <data key="d11">merge</data>
+</edge>
+<edge source="6:1" target="7:1">
+  <data key="d10">0.5756884889943259</data>
+  <data key="d11">merge</data>
+</edge>
+<edge source="6:3" target="7:2">
+  <data key="d10">0.6312966227531432</data>
+  <data key="d11">merge</data>
+</edge>
+<edge source="6:4" target="7:2">
+  <data key="d10">0.5428149044513702</data>
+  <data key="d11">merge</data>
+</edge>
+<edge source="7:2" target="8:4">
+  <data key="d10">0.6525061368942261</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="8:1" target="9:1">
+  <data key="d10">0.6074002325534821</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="8:4" target="9:2">
+  <data key="d10">0.623639976978302</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="8:5" target="9:3">
+  <data key="d10">0.6543105065822602</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="9:2" target="10:4">
+  <data key="d10">0.6689702818268224</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="9:3" target="10:1">
+  <data key="d10">0.6309407174587249</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="10:3" target="11:3">
+  <data key="d10">0.6821819603443146</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="11:1" target="12:6">
+  <data key="d10">0.7167054235935211</data>
+  <data key="d11">continue</data>
+</edge>
+<edge source="12:6" target="13:0">
+  <data key="d10">0.6398512065410613</data>
+  <data key="d11">continue</data>
+</edge>
+</graph></graphml>
