@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-BERTopic → TEN (Topic Evolution Network) — Step 1: LLM 标注主题
-================================================================
+BERTopic → TEN (Topic Evolution Network) — Step 1: LLM 标注主题（含去重与缓存）
+==============================================================================
 给 nodes.csv 中的每个“年份:主题”节点生成：
 - label_llm  （≤5 个词的简短主题名）
 - summary_llm（≤60 字的说明）
 并另存为 nodes_enriched.csv（默认覆盖到同目录）。
+
+新增：
+- --dedup-key  支持按 top_terms/topic 去重（复用同一主题的 LLM 结果，节省费用）
+- --cache      JSON 缓存文件，断点续跑与结果复用
+- --skip-existing  若节点已有 label_llm 则跳过（增量更新）
 
 可选地，你可以提供每个节点的代表性文本（代表文档/句子）来提升标签质量：
 - 通过 --reps-jsonl 传入 JSONL 文件，每行形如：
@@ -14,19 +19,21 @@ BERTopic → TEN (Topic Evolution Network) — Step 1: LLM 标注主题
 
 使用方式
 --------
-基础：仅基于 top_terms 标注
-    python bertopic_to_ten_llm.py \
+基础：仅基于 top_terms 标注（按 top_terms 去重 + 缓存）
+    python bertopic_to_ten_llm_dedup.py \
         --nodes ./ten_out/nodes.csv \
-        --api openai --model gpt-4o-mini --api-key-env OPENAI_API_KEY
+        --api openai --model gpt-4o-mini --api-key-env OPENAI_API_KEY \
+        --dedup-key top_terms --cache ./ten_out/llm_cache.json --skip-existing
 
 带代表文本：
-    python bertopic_to_ten_llm.py \
+    python bertopic_to_ten_llm_dedup.py \
         --nodes ./ten_out/nodes.csv \
         --reps-jsonl ./ten_out/reps.jsonl \
-        --api openai --model gpt-4o-mini --api-key-env OPENAI_API_KEY
+        --api openai --model gpt-4o-mini --api-key-env OPENAI_API_KEY \
+        --dedup-key top_terms --cache ./ten_out/llm_cache.json
 
 兼容 OpenAI 风格的本地/自建推理（vLLM/Ollama 等），只要支持 /v1/chat/completions：
-    python bertopic_to_ten_llm.py \
+    python bertopic_to_ten_llm_dedup.py \
         --nodes ./ten_out/nodes.csv \
         --api openai --api-base http://localhost:8000/v1 --model my-model --api-key-env DUMMY
 
@@ -41,6 +48,9 @@ BERTopic → TEN (Topic Evolution Network) — Step 1: LLM 标注主题
 --api-key-env     读取 API Key 的环境变量名（默认 OPENAI_API_KEY）
 --rate-limit      每次调用之间的休眠秒数（默认 0.3）
 --lang            提示词语言：zh/ja/en（默认 zh）
+--dedup-key       none/topic/top_terms（默认 top_terms）
+--cache           (可选) 结果缓存 JSON 路径
+--skip-existing   (flag) 若节点已有人工或历史生成的 label_llm 则跳过
 
 输出
 ----
@@ -53,10 +63,15 @@ BERTopic → TEN (Topic Evolution Network) — Step 1: LLM 标注主题
 3) 若调用失败，该节点置空并继续。
 """
 from __future__ import annotations
-import os, sys, json, time, argparse
+import os
+import sys
+import json
+import time
+import argparse
+import unicodedata
+import re
 from typing import Dict, Any, List
 import pandas as pd
-import unicodedata, re
 
 # -----------------------------
 # LLM 客户端（OpenAI 兼容）
@@ -75,7 +90,7 @@ class LLMClient:
         if api == "openai":
             if OpenAI is None:
                 raise RuntimeError("openai 库未安装：pip install openai")
-            kwargs = {}
+            kwargs: Dict[str, Any] = {}
             if api_base:
                 kwargs["base_url"] = api_base
             if self.api_key:
@@ -134,13 +149,14 @@ class LLMClient:
             label = str(data.get("label", "")).strip()
             summary = str(data.get("summary", "")).strip()
             return {"label_llm": label, "summary_llm": summary}
-        except Exception as e:
+        except Exception:
             # 失败返回空
             return {"label_llm": "", "summary_llm": ""}
 
 # -----------------------------
-# 加载 reps.jsonl（可选）
+# reps.jsonl / cache / 去重键
 # -----------------------------
+SEP = re.compile(r"[;,，、|\s]+")
 
 def load_reps_jsonl(path: str|None) -> Dict[str, List[str]]:
     if not path or not os.path.exists(path):
@@ -161,30 +177,29 @@ def load_reps_jsonl(path: str|None) -> Dict[str, List[str]]:
                 continue
     return mapping
 
-SEP = re.compile(r"[;,，、|\s]+")
-
 def normalize_terms_signature(s: str) -> str:
     if not isinstance(s, str):
         s = "" if s is None else str(s)
     s = unicodedata.normalize("NFKC", s.strip().lower())
     toks = [t for t in SEP.split(s) if t]
-    # 去重但保留大致顺序（或改成 sorted(toks) 更激进）
     seen, out = set(), []
     for t in toks:
         if t not in seen:
-            seen.add(t); out.append(t)
+            seen.add(t)
+            out.append(t)
     return ";".join(out)
 
-# ---- 新增：加载/保存 cache ----
 def load_cache(path: str|None) -> dict:
-    if not path or not os.path.exists(path): return {}
+    if not path or not os.path.exists(path):
+        return {}
     try:
         return json.load(open(path, "r", encoding="utf-8"))
     except Exception:
         return {}
 
 def save_cache(path: str|None, cache: dict):
-    if not path: return
+    if not path:
+        return
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(cache, f, ensure_ascii=False, indent=2)
@@ -204,35 +219,57 @@ def main():
     ap.add_argument('--model', required=True)
     ap.add_argument('--api-key-env', default='OPENAI_API_KEY')
     ap.add_argument('--rate-limit', type=float, default=0.3)
-    ap.add_argument('--lang', default='zh', choices=['zh','ja','en'])
+    ap.add_argument('--lang', default='ja', choices=['zh','ja','en'])
     ap.add_argument('--dedup-key', default='top_terms', choices=['none','topic','top_terms'])
     ap.add_argument('--cache', default=None, help='保存/读取 LLM 结果缓存的 JSON 文件')
     ap.add_argument('--skip-existing', action='store_true', help='若节点已有 label_llm 则跳过')
-
     args = ap.parse_args()
 
     df = pd.read_csv(args.nodes)
-    need_cols = {'id','year','topic','top_terms'}
-    miss = need_cols - set(c.lower() for c in df.columns)
-    # 容错：大小写统一
+    # 统一小写列名
     df.columns = [c.strip().lower() for c in df.columns]
-    if not need_cols.issubset(set(df.columns)):
-        print(f"[Warn] nodes.csv 缺少列: {miss}. 将尽力使用已有列。")
     reps_map = load_reps_jsonl(args.reps_jsonl)
-
     client = LLMClient(api=args.api, model=args.model, api_base=args.api_base, api_key_env=args.api_key_env)
 
-    labels, summaries = [], []
+    cache = load_cache(args.cache)
+
+    def make_key(row) -> str:
+        if args.dedup_key == 'topic':
+            return f"topic::{row.get('topic')}"
+        elif args.dedup_key == 'top_terms':
+            return f"terms::{normalize_terms_signature(row.get('top_terms',''))}"
+        else:
+            return f"id::{row.get('id')}"
+
+    # 准备输出列容器
+    labels: List[str] = []
+    summaries: List[str] = []
+
+    total = len(df)
     for i, r in df.iterrows():
-        nid  = str(r.get('id', ''))
-        year = str(r.get('year', ''))
-        terms= str(r.get('top_terms', nid))
-        reps = reps_map.get(nid, [])
-        out  = client.label_topic(args.lang, year, nid, terms, reps)
-        labels.append(out['label_llm'])
-        summaries.append(out['summary_llm'])
+        # 增量：已有结果就跳过
+        if args.skip_existing and str(r.get('label_llm','')).strip():
+            labels.append(r.get('label_llm',''))
+            summaries.append(r.get('summary_llm',''))
+            continue
+
+        key = make_key(r)
+        if key in cache and all(cache[key].get(k) for k in ('label_llm','summary_llm')):
+            out = cache[key]
+        else:
+            nid  = str(r.get('id',''))
+            year = str(r.get('year',''))
+            terms= str(r.get('top_terms', nid))
+            reps = reps_map.get(nid, [])
+            out  = client.label_topic(args.lang, year, nid, terms, reps)
+            cache[key] = out
+            save_cache(args.cache, cache)
+
+        labels.append(out.get('label_llm',''))
+        summaries.append(out.get('summary_llm',''))
+
         if (i+1) % 20 == 0:
-            print(f"[Info] labeled {i+1}/{len(df)}")
+            print(f"[Info] labeled {i+1}/{total} (cache size={len(cache)})")
         time.sleep(max(0.0, args.rate_limit))
 
     df['label_llm'] = labels

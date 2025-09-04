@@ -22,6 +22,23 @@
                 "--time-step", "1",
                 "--use-fugashi"
             ]
+        },
+
+        {
+            "name": "Python Debugger: Current File2",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/bertopic_to_ten_llm.py",
+            "python": "C:/Users/55347/miniconda3/envs/deeplearning/python.exe",
+            "console": "integratedTerminal",
+            "args": [
+                "--nodes", "./ten_out/nodes.csv",
+                "--api", "openai",
+                "--model", "gpt-4o-mini",
+                "--dedup-key", "top_terms",
+                "--cache", "./ten_out/llm_cache.json",
+                "--skip-existing"
+            ]
         }
     ]
 }
